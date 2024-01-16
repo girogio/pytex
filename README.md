@@ -3,12 +3,11 @@
 A Python-based utility for generating and compiling LaTeX documents
 programmatically. Ideal for automating the creation of complex LaTeX documents.
 
-## Features
+## Requirements
 
-- **Dynamic LaTeX Document Creation**: Easily create and manipulate LaTeX documents in Python.
-- **Package and Command Management**: Add LaTeX packages and commands seamlessly.
-- **Custom Configuration**: Configure document settings like page size and package options.
-- **Compile LaTeX to PDF**: Automatically compile LaTeX documents to PDF with a single command.
+- πTex assumes that the command `pdflatex` available in your path. Please see
+  [this page](https://www.latex-project.org/get/) for instructions on how to
+  install LaTeX on your system.
 
 ## Installation
 
@@ -18,23 +17,23 @@ pip install pytex
 
 ## Quick Start
 
-1. **Create a LaTeX Document**
+- Minimal example:
 
-```python
-from pytex import LatexDocument
+    ```python
+    from pytex import LatexDocument
 
-# Create a new LaTeX document
-doc = LatexDocument("my_document")
+    # Create a new LaTeX document
+    doc = LatexDocument("my_document")
 
-# Add content to the document
-doc.content += r"""
-\section{Introduction}
-This is an automatically generated LaTeX document.
-"""
+    # Add content to the document
+    doc.content += r"""
+    \section{Introduction}
+    This is an automatically generated LaTeX document.
+    """
 
-# Compile the LaTeX document to PDF
-doc.compile()
-```
+    # Compile the LaTeX document to PDF
+    doc.compile()
+    ```
 
 ## Documentation
 
