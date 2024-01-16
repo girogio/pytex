@@ -38,7 +38,7 @@ doc.compile()
 
 ## Documentation
 
-For detailed documentation, visit [Documentation Link].
+Detailed documentation will be available soon.
 
 ## Contributing
 
