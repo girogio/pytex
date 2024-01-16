@@ -12,7 +12,7 @@ programmatically. Ideal for automating the creation of complex LaTeX documents.
 ## Installation
 
 ```bash
-pip install pytex
+pip install pitex
 ```
 
 ## Quick Start

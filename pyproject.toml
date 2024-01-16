@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "pytex"
+name = "pitex"
 version = "1.0.1"
 description = ""
 authors = ["girogio <giorgiogrigolo03@gmail.com>"]
 readme = "README.md"
-packages = [{ include = "pytex", from = "src" }]
+packages = [{ include = "pitex", from = "src" }]
 
 [tool.poetry.dependencies]
 python = "^3.9"

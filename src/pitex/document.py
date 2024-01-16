@@ -3,14 +3,14 @@ from enum import Enum
 from time import time
 from pathlib import Path
 
-import pytex.config
-import pytex.package
+import pitex.config
+import pitex.package
 
 
 class LatexDocument:
     name: str
     """The name of the document."""
-    config: pytex.config.LatexConfig
+    config: pitex.config.LatexConfig
     """The parameters of the latex document to be generated."""
     doc_text: str = "\\documentclass{article}"
     """The final document file text string."""
@@ -22,7 +22,7 @@ class LatexDocument:
     def __init__(
         self,
         name: str = "main",
-        config: pytex.config.LatexConfig = pytex.config.LatexConfig(),
+        config: pitex.config.LatexConfig = pitex.config.LatexConfig(),
     ):
         self.name = name
         self.config = config
@@ -34,7 +34,7 @@ class LatexDocument:
 
     def add_package(self, name: str, options: list[str] = []):
         if self.config.packages:
-            self.config.packages.append(pytex.package.Package(name))
+            self.config.packages.append(pitex.package.Package(name))
 
     def generate_document(self) -> str:
         generated_document = LatexDocument(self.name, self.config)
