@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "pytex"
+version = "0.1.0"
+description = ""
+authors = ["girogio <giorgiogrigolo03@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "pytex", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
