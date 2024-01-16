@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pytex"
-version = "0.1.0"
+version = "1.0.1"
 description = ""
 authors = ["girogio <giorgiogrigolo03@gmail.com>"]
 readme = "README.md"
