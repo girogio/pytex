@@ -11,6 +11,8 @@ venv/
 # Pytest cache
 .pytest_cache/
 
+dist/*
+
 # PyCharm project settings
 .idea/
 
