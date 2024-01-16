@@ -3,29 +3,14 @@ from enum import Enum
 from time import time
 from pathlib import Path
 
-from pytex.config import LatexConfig
-from pytex.package import Package
-
-
-class PageType(Enum):
-    """Enum for the page type of the document.
-
-    Args:
-        Enum (str): The page type of the document.
-    """
-
-    A4 = "a4"
-    """A4 page type."""
-    A5 = "a5"
-    """A5 page type."""
-    LETTER = "letter"
-    """Letter page type."""
+import pytex.config
+import pytex.package
 
 
 class LatexDocument:
     name: str
     """The name of the document."""
-    config: LatexConfig
+    config: pytex.config.LatexConfig
     """The parameters of the latex document to be generated."""
     doc_text: str = "\\documentclass{article}"
     """The final document file text string."""
@@ -37,7 +22,7 @@ class LatexDocument:
     def __init__(
         self,
         name: str = "main",
-        config: LatexConfig = LatexConfig(),
+        config: pytex.config.LatexConfig = pytex.config.LatexConfig(),
     ):
         self.name = name
         self.config = config
@@ -49,7 +34,7 @@ class LatexDocument:
 
     def add_package(self, name: str, options: list[str] = []):
         if self.config.packages:
-            self.config.packages.append(Package(name))
+            self.config.packages.append(pytex.package.Package(name))
 
     def generate_document(self) -> str:
         generated_document = LatexDocument(self.name, self.config)
